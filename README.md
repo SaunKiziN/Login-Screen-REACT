@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Tela de Login - React + Next.js + Tailwind
 
-## Getting Started
+Uma tela de login simples e funcional, criada utilizando:
 
-First, run the development server:
+- ⚛️ **React + Next.js 14**
+- 🎨 **TailwindCSS** para o design
+- 🔐 **Autenticação** básica (sem backend por enquanto)
+- 💡 Estrutura preparada para adicionar integração com Firebase, Auth0 ou outros sistemas de autenticação
+
+---
+
+## 🖼️ Preview
+
+![Preview do Projeto](./public/preview.png)
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/) - Framework full-stack para React
+- [React](https://reactjs.org/) - Biblioteca para interfaces dinâmicas
+- [TailwindCSS](https://tailwindcss.com/) - Framework utilitário para design rápido e customizável
+- [TypeScript](https://www.typescriptlang.org/) - Superset do JavaScript para um código mais seguro e escalável
+
+---
+
+## ⚙️ Como Rodar Localmente
+
+Para rodar este projeto localmente, siga os passos abaixo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+git clone https://github.com/SaunKiziN/Login-Screen-REACT.git
+
+# Acesse a pasta do projeto
+cd Login-Screen-REACT
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev 
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura de Pastas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📁 app/
+ ┣ 📁 login-screen/
+   ┣ 📄 login.tsx            # Tela de login
+ ┣ 📁 user-screen/
+   ┣ 📄 page.tsx             # Página de usuário após login
+ ┣ 📄 layout.tsx             # Layout geral da aplicação
+ ┣ 📄 page.tsx               # Página inicial
+📁 lib/
+ ┣ 📁 Data-storage/
+   ┣ 📄 page.tsx             # Gerenciamento de dados de armazenamento
+ ┣ 📄 validation.tsx         # Validação de formulários e dados
+📁 public/
+📁 styles/
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Autor
+Feito com 💻 por SaunKiziN.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 Licença
+Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais detalhes.
