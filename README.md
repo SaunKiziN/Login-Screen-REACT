@@ -1,11 +1,16 @@
-# 🔐 Tela de Login - React + Next.js + Tailwind
+# 🔐 Login Screen — React UI
 
-Uma tela de login simples e funcional, criada utilizando:
+Interface de login desenvolvida com **React**, **Next.js** e **Tailwind CSS**, com foco em layout limpo, responsividade, validação visual e experiência de usuário.
 
-- ⚛️ **React + Next.js 14**
-- 🎨 **TailwindCSS** para o design
-- 🔐 **Autenticação** básica (sem backend por enquanto)
-- 💡 Estrutura preparada para adicionar integração com Firebase, Auth0 ou outros sistemas de autenticação
+> Este projeto é um protótipo front-end. Ele não possui autenticação real com banco de dados ou back-end.
+
+---
+
+## 🔗 Demo
+
+Acesse o projeto online:
+
+[login-screen-react-mauve.vercel.app](https://login-screen-react-mauve.vercel.app/)
 
 ---
 
@@ -15,18 +20,57 @@ Uma tela de login simples e funcional, criada utilizando:
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Sobre o projeto
 
-- [Next.js](https://nextjs.org/) - Framework full-stack para React
-- [React](https://reactjs.org/) - Biblioteca para interfaces dinâmicas
-- [TailwindCSS](https://tailwindcss.com/) - Framework utilitário para design rápido e customizável
-- [TypeScript](https://www.typescriptlang.org/) - Superset do JavaScript para um código mais seguro e escalável
+Este projeto foi criado para praticar a construção de uma tela de login moderna, simples e funcional.
+
+O foco principal foi trabalhar:
+
+* estrutura de interface;
+* estilização com Tailwind CSS;
+* componentização;
+* responsividade;
+* validação de campos;
+* simulação de fluxo de login;
+* organização de arquivos em um projeto Next.js.
 
 ---
 
-## ⚙️ Como Rodar Localmente
+## Funcionalidades
 
-Para rodar este projeto localmente, siga os passos abaixo:
+* Tela de login responsiva
+* Campos de e-mail e senha
+* Validação visual dos campos
+* Botão para exibir/ocultar senha
+* Opção “lembrar de mim”
+* Simulação de acesso após login
+* Página de usuário após autenticação simulada
+
+---
+
+## Credenciais de teste
+
+Use as credenciais abaixo para testar a simulação de login:
+
+```txt
+E-mail: admin@teste.com
+Senha: admin123
+```
+
+> Essas credenciais são apenas para demonstração. O projeto não utiliza banco de dados nem autenticação segura em ambiente de produção.
+
+---
+
+## Tecnologias utilizadas
+
+* [Next.js](https://nextjs.org/) — Framework React para aplicações web
+* [React](https://react.dev/) — Biblioteca para construção de interfaces
+* [Tailwind CSS](https://tailwindcss.com/) — Framework utilitário para estilização
+* [TypeScript](https://www.typescriptlang.org/) — Superset do JavaScript com tipagem estática
+
+---
+
+## Como rodar localmente
 
 ```bash
 # Clone o repositório
@@ -39,34 +83,78 @@ cd Login-Screen-REACT
 npm install
 
 # Rode o projeto
-npm run dev 
+npm run dev
+```
 
+Depois, acesse:
+
+```txt
+http://localhost:3000
 ```
 
 ---
 
-## 📁 Estrutura de Pastas
+## Estrutura de pastas
 
-📁 app/
- ┣ 📁 login-screen/
-   ┣ 📄 login.tsx            # Tela de login
- ┣ 📁 user-screen/
-   ┣ 📄 page.tsx             # Página de usuário após login
- ┣ 📄 layout.tsx             # Layout geral da aplicação
- ┣ 📄 page.tsx               # Página inicial
-📁 lib/
- ┣ 📁 Data-storage/
-   ┣ 📄 page.tsx             # Gerenciamento de dados de armazenamento
- ┣ 📄 validation.tsx         # Validação de formulários e dados
-📁 public/
-📁 styles/
+```txt
+app/
+├── login-screen/
+│   └── login.tsx
+├── user-screen/
+│   └── page.tsx
+├── layout.tsx
+└── page.tsx
+
+lib/
+├── Data-storage/
+│   └── page.tsx
+└── validation.tsx
+
+public/
+└── preview.png
+
+styles/
+```
 
 ---
 
-## 🧠 Autor
-Feito com 💻 por SaunKiziN.
+## Limitações
+
+Este projeto ainda não possui:
+
+* cadastro real de usuários;
+* autenticação com back-end;
+* banco de dados;
+* recuperação de senha funcional;
+* proteção real de rotas privadas;
+* integração com serviços como Firebase, Supabase ou Auth0.
 
 ---
 
-## 📜 Licença
-Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais detalhes.
+## Próximos passos
+
+Possíveis melhorias futuras:
+
+* adicionar cadastro de usuários;
+* integrar autenticação real com Firebase, Supabase ou Auth0;
+* criar proteção de rotas;
+* melhorar mensagens de erro;
+* adicionar testes;
+* refatorar componentes;
+* melhorar acessibilidade.
+
+---
+
+## Autor
+
+Feito por **Samuel Berretta / SaunKiziN**
+
+* GitHub: [github.com/SaunKiziN](https://github.com/SaunKiziN)
+* LinkedIn: [linkedin.com/in/samuel-berretta](https://www.linkedin.com/in/samuel-berretta)
+* E-mail: [samuberretta.biz@gmail.com](mailto:samuberretta.biz@gmail.com)
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
