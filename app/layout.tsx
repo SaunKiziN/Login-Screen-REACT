@@ -1,11 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { Metadata } from 'next';
+import type { Metadata } from "next";
 import "./globals.css";
 
-const geistSans = Geist({  
-  variable: "--font-geist-sans",  
-  subsets: ["latin"],  
-});  
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "simple-auth-next",
-  description: "A simple login-screen in Next.js", 
+  title: "Login Screen | Autenticação simulada",
+  description:
+    "Projeto de aprendizado em React e Next.js com tela de login, validação de campos e autenticação simulada no navegador.",
 };
 
 export default function RootLayout({
@@ -24,12 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        <meta name="description" content={metadata.description ?? "Descrição padrão"} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charSet="UTF-8" />
-        <title>{String(metadata.title ?? "Login")}</title>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

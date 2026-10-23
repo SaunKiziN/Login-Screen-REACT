@@ -1,5 +1,3 @@
-
-
 import { users } from './Data-storage/user-storage';
 
 type LoginData = {
@@ -21,9 +19,6 @@ type ValidationResult = {
 };
 
 export function validateLogin(data: LoginData): ValidationResult {
-  console.log('Dados recebidos na validação:', data);
-  console.log('Usuários do banco:', users);
-
   const errors: {
     email?: string;
     password?: string;
@@ -47,13 +42,13 @@ export function validateLogin(data: LoginData): ValidationResult {
     };
   }
 
-  // Procurando o usuário no array de usuários
   const user = users.find(
     (user) => user.email === data.email && user.password === data.password
   );
 
   if (!user) {
     errors.email = 'Email ou senha incorretos';
+
     return {
       isValid: false,
       errors,
