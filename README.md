@@ -1,100 +1,80 @@
-# 🔐 Login Screen — React UI
+# Login Screen
 
-Interface de login desenvolvida com **React**, **Next.js** e **Tailwind CSS**, com foco em layout limpo, responsividade, validação visual e experiência de usuário.
+Projeto de aprendizado com React, Next.js e Tailwind CSS para praticar componentes, formulários, validação de campos e navegação entre páginas.
 
-> Este projeto é um protótipo front-end. Ele não possui autenticação real com banco de dados ou back-end.
+**A autenticação é simulada e não é segura para produção.** Os usuários de teste ficam no código e a sessão é representada por dados no `localStorage` do navegador. Não há back-end, banco de dados ou proteção real de rotas.
 
----
-
-## 🔗 Demo
-
-Acesse o projeto online:
+## Demo
 
 [login-screen-react-mauve.vercel.app](https://login-screen-react-mauve.vercel.app/)
 
----
+## Preview
 
-## 🖼️ Preview
-
-![Preview do Projeto](./public/preview.png)
-
----
-
-## Sobre o projeto
-
-Este projeto foi criado para praticar a construção de uma tela de login moderna, simples e funcional.
-
-O foco principal foi trabalhar:
-
-* estrutura de interface;
-* estilização com Tailwind CSS;
-* componentização;
-* responsividade;
-* validação de campos;
-* simulação de fluxo de login;
-* organização de arquivos em um projeto Next.js.
-
----
+![Preview do projeto](./public/preview.png)
 
 ## Funcionalidades
 
-* Tela de login responsiva
-* Campos de e-mail e senha
-* Validação visual dos campos
-* Botão para exibir/ocultar senha
-* Opção “lembrar de mim”
-* Simulação de acesso após login
-* Página de usuário após autenticação simulada
-
----
+- Tela de login responsiva na rota `/`, com campos de e-mail e senha.
+- Validação de campos obrigatórios, formato de e-mail e credenciais de teste.
+- Mensagens de erro no formulário.
+- Botão para exibir ou ocultar a senha.
+- Login simulado com redirecionamento para `/user-screen`.
+- Página de usuário com nome, e-mail e uma data de criação fixa, apenas demonstrativa.
+- Retorno ao login quando os dados de usuário estão ausentes ou não podem ser interpretados como JSON.
+- Logout que remove os dados de usuário do `localStorage` e retorna ao login.
 
 ## Credenciais de teste
-
-Use as credenciais abaixo para testar a simulação de login:
 
 ```txt
 E-mail: admin@teste.com
 Senha: admin123
 ```
 
-> Essas credenciais são apenas para demonstração. O projeto não utiliza banco de dados nem autenticação segura em ambiente de produção.
+Os usuários de demonstração estão em `lib/Data-storage/user-storage.ts`. As credenciais são públicas e servem apenas para testar o fluxo simulado.
 
----
+## Tecnologias
 
-## Tecnologias utilizadas
+- Next.js 16 com App Router.
+- React 18.
+- TypeScript 5.
+- Tailwind CSS 3 e PostCSS 8.
+- React Icons 5.
+- ESLint 9.
 
-* [Next.js](https://nextjs.org/) — Framework React para aplicações web
-* [React](https://react.dev/) — Biblioteca para construção de interfaces
-* [Tailwind CSS](https://tailwindcss.com/) — Framework utilitário para estilização
-* [TypeScript](https://www.typescriptlang.org/) — Superset do JavaScript com tipagem estática
+O script de build utiliza Webpack (`next build --webpack`). O desenvolvimento mantém o comando `next dev`.
 
----
+## Como executar localmente
 
-## Como rodar localmente
+Com Node.js e npm instalados:
 
 ```bash
-# Clone o repositório
 git clone https://github.com/SaunKiziN/Login-Screen-REACT.git
-
-# Acesse a pasta do projeto
 cd Login-Screen-REACT
-
-# Instale as dependências
-npm install
-
-# Rode o projeto
+npm ci
 npm run dev
 ```
 
-Depois, acesse:
+Acesse [localhost:3000](http://localhost:3000).
 
-```txt
-http://localhost:3000
+Para gerar e executar o build localmente:
+
+```bash
+npm run build
+npm start
 ```
 
----
+As fontes Geist e Geist Mono são carregadas com `next/font/google`; o build precisa de acesso ao Google Fonts para baixá-las.
 
-## Estrutura de pastas
+## Verificações
+
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+npm audit --omit=dev
+```
+
+## Estrutura principal
 
 ```txt
 app/
@@ -102,59 +82,34 @@ app/
 │   └── login.tsx
 ├── user-screen/
 │   └── page.tsx
+├── favicon.ico
+├── globals.css
 ├── layout.tsx
 └── page.tsx
-
 lib/
 ├── Data-storage/
-│   └── page.tsx
-└── validation.tsx
-
+│   └── user-storage.ts
+└── validation.ts
 public/
 └── preview.png
-
-styles/
+LICENSE
+README.md
 ```
-
----
 
 ## Limitações
 
-Este projeto ainda não possui:
+A validação ocorre no navegador, usando uma lista local de usuários. Os dados no `localStorage` podem ser alterados pelo visitante; a checagem na página de usuário serve somente para demonstrar a navegação.
 
-* cadastro real de usuários;
-* autenticação com back-end;
-* banco de dados;
-* recuperação de senha funcional;
-* proteção real de rotas privadas;
-* integração com serviços como Firebase, Supabase ou Auth0.
-
----
-
-## Próximos passos
-
-Possíveis melhorias futuras:
-
-* adicionar cadastro de usuários;
-* integrar autenticação real com Firebase, Supabase ou Auth0;
-* criar proteção de rotas;
-* melhorar mensagens de erro;
-* adicionar testes;
-* refatorar componentes;
-* melhorar acessibilidade.
-
----
+Não há cadastro, recuperação de senha ou opção “Lembrar de mim”. A persistência existente usa `localStorage` até o logout ou a remoção dos dados do navegador. Este projeto não deve ser usado como sistema de autenticação em produção.
 
 ## Autor
 
-Feito por **Samuel Berretta / SaunKiziN**
+Samuel Berretta / SaunKiziN
 
-* GitHub: [github.com/SaunKiziN](https://github.com/SaunKiziN)
-* LinkedIn: [linkedin.com/in/samuel-berretta](https://www.linkedin.com/in/samuel-berretta)
-* E-mail: [samuberretta.biz@gmail.com](mailto:samuberretta.biz@gmail.com)
-
----
+- GitHub: [github.com/SaunKiziN](https://github.com/SaunKiziN)
+- LinkedIn: [linkedin.com/in/samuel-berretta](https://www.linkedin.com/in/samuel-berretta)
+- E-mail: [samuberretta.biz@gmail.com](mailto:samuberretta.biz@gmail.com)
 
 ## Licença
 
-Este projeto está licenciado sob a licença MIT.
+Licença [MIT](./LICENSE). Copyright (c) 2025 Samuel Berretta.
