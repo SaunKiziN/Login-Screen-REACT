@@ -27,7 +27,6 @@ export default function LoginScreen() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Dados Enviados:', formData);
     const validation = validateLogin(formData);
 
     if (!validation.isValid) {
@@ -104,28 +103,6 @@ export default function LoginScreen() {
             {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password}</p>}
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-              />
-              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                Lembrar de mim
-              </label>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => alert('Funcionalidade em desenvolvimento')}
-              className="text-sm text-indigo-600 hover:text-indigo-500"
-            >
-              Esqueceu a senha?
-            </button>
-          </div>
-
           <button
             type="submit"
             className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -134,14 +111,6 @@ export default function LoginScreen() {
           </button>
         </form>
 
-        <div className="mt-4 text-center">
-          <p className="text-sm text-gray-600">
-            Não tem conta?{' '}
-            <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-              Cadastre-se
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );
